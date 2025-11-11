@@ -1,0 +1,29 @@
+<div class="ranking-container">
+  <h2 class="text-2xl font-bold mb-6 text-gray-800">🏆 Ranking de Cobertura QA</h2>
+  
+  @if (loading) {
+    <div class="loading">Cargando ranking...</div>
+  }
+  
+  @if (error) {
+    <div class="error-message">{{ error }}</div>
+  }
+  
+  @if (!loading && !error) {
+    <div class="ranking-list">
+      @for (item of ranking; track $index) {
+        <div class="ranking-item">
+          <div class="app-info">
+            <h3 class="app-name">{{ item.aplicacion.nombre }}</h3>
+            <p class="app-description">{{ item.aplicacion.descripcion }}</p>
+          </div>
+          <div class="cobertura-info">
+            <span class="cobertura-badge" [class]="getCoberturaColor(item.cobertura)">
+              {{ item.cobertura }}%
+            </span>
+          </div>
+        </div>
+      }
+    </div>
+  }
+</div>
