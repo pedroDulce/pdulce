@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @Entity
-@Table(name = "aplicaciones")
+@Table(name = "aplicacion")
 @Data
 public class Aplicacion {
     @Id
@@ -24,4 +24,16 @@ public class Aplicacion {
     private LocalDateTime fechaCreacion;
     @OneToMany(mappedBy = "aplicacion", cascade = CascadeType.ALL)
     private List<ElementoPromocionable> elementosPromocionables = new ArrayList<>();
+
+    public Aplicacion () {
+
+    }
+
+    public Aplicacion(Long id, String appWebTest, String aplicaciónDePrueba, String equipoQa, EstadoAplicacion activa) {
+        this.id = id;
+        this.nombre = appWebTest;
+        this.descripcion = aplicaciónDePrueba;
+        this.equipoResponsable = equipoQa;
+        this.estado = activa;
+    }
 }

@@ -6,7 +6,7 @@ import lombok.Data;
 import java.util.*;
 
 @Entity
-@Table(name = "elementos_promocionables")
+@Table(name = "elemento_promocionable")
 @Data
 public class ElementoPromocionable {
     @Id
