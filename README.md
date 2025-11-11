@@ -10,5 +10,5 @@ Microservicio Spring Boot para asistente de catálogo QA con RAG (Retrieval-Augm
 - **REST API** - Endpoints para chat y consultas
 - **Arquitectura hexagonal** - Separación clara de responsabilidades
 
-## 📋 Modelo de Datos
+## 📋 Modelo de Datos  
  
