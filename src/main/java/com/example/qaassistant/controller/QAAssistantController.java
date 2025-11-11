@@ -42,8 +42,3 @@ public class QAAssistantController {
     }
 }
 
-// DTOs
-record ChatRequest(String question) {}
-
-record RankingDTO(Aplicacion aplicacion, Float cobertura) {}
-

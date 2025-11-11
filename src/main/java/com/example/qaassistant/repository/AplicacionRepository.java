@@ -19,5 +19,6 @@ public interface AplicacionRepository extends JpaRepository<Aplicacion, Long> {
 
     @Query("SELECT a FROM Aplicacion a WHERE a.equipoResponsable = :equipo")
     List<Aplicacion> findByEquipoResponsable(String equipo);
+
 }
 
